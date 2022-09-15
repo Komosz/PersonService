@@ -20,7 +20,7 @@ export class FormComponent implements OnInit {
       lastName: this.formBuilder.control('', [Validators.required]),
       streetName: this.formBuilder.control('', [Validators.required]),
       houseNumber: this.formBuilder.control('', [Validators.required]),
-      apartmentNumber: this.formBuilder.control('', [Validators.required]),
+      apartmentNumber: this.formBuilder.control(''),
       postalCode: this.formBuilder.control('', [Validators.required]),
       town: this.formBuilder.control('', [Validators.required]),
       phoneNumber: this.formBuilder.control('', [Validators.required]),

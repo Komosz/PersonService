@@ -37,11 +37,6 @@ namespace PersonService.Data
                 //File.Delete(dbName);
 
             Database.EnsureCreated();
-
-            Persons.AddRange(new Person[]{
-                new Person(){ ApartmentNumber = "TEST1", DateOfBirth = DateTime.Now.AddYears(-1).AddDays(1), FirstName = "IMIE", HouseNumber = "TEST1", LastName = "NAZWISKO", PhoneNumber = "123", PostalCode = "82-200", StreetName = "TEST1", Town = "TEST1"},
-                new Person(){ ApartmentNumber = "TEST2", DateOfBirth = DateTime.Now.AddYears(-1).AddDays(-1), FirstName = "IMIE", HouseNumber = "TEST2", LastName = "NAZWISKO", PhoneNumber = "123", PostalCode = "82-200", StreetName = "TEST2", Town = "TEST2"}
-            });
             SaveChanges();
         }
     }
