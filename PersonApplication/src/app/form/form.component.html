@@ -1,0 +1,44 @@
+<div mat-dialog-content>
+    <form [formGroup]="form" class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>First name</mat-label>
+                <input formControlName="firstName" matInput>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Last Name</mat-label>
+                <input formControlName="lastName" matInput>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Street Name</mat-label>
+                <input formControlName="streetName" matInput>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>House Number</mat-label>
+                <input formControlName="houseNumber" matInput>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Apartment Number</mat-label>
+                <input formControlName="apartmentNumber" matInput>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Postal Code</mat-label>
+                <input formControlName="postalCode" matInput>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Town</mat-label>
+                <input formControlName="town" matInput>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Phone Number</mat-label>
+                <input formControlName="phoneNumber" matInput>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Date Of Birth</mat-label>
+                <input formControlName="dateOfBirth" matInput [matDatepicker]="picker">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+    </form>
+    <button [disabled]="!form.valid" (click)="onSubmit()" mat-button>{{data.toUpdate?"Update":"Add"}}</button>
+</div>

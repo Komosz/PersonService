@@ -1,0 +1,10 @@
+app-table{
+    display: flex;
+    justify-content: center;
+}
+
+:host{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 5%;
+}
